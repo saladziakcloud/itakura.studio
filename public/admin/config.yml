@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: saladziakcloud/itakura-studio # Twój GitHub
+  repo: saladziakcloud/itakura.studio # Twój GitHub
   branch: main
   base_url: https://itakura.studio
   auth_endpoint: /api/auth/login
