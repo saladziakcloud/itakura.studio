@@ -1,21 +1,27 @@
 backend:
   name: github
-  repo: saladziakcloud/itakura.studio # Twój GitHub
+  repo: saladziakcloud/itakura.studio
   branch: main
   base_url: https://itakura.studio
   auth_endpoint: /api/auth/login
+
+locale: pl
 
 media_folder: "public/images"
 public_folder: "/images"
 
 collections:
   - name: "blog"
-    label: "Wpisy na bloga"
+    label: "Wpisy i Projekty"
+    label_singular: "Wpis / Projekt"
     folder: "src/content/blog"
     create: true
+    slug: "{{slug}}"
     fields:
       - {label: "Tytuł", name: "title", widget: "string"}
       - {label: "Data publikacji", name: "pubDate", widget: "datetime"}
-      - {label: "Opis", name: "description", widget: "string"}
-      - {label: "Zdjęcie wyróżniające", name: "heroImage", widget: "image", required: false}
-      - {label: "Treść", name: "body", widget: "markdown"}
+      - {label: "Krótki opis / Zajawka", name: "description", widget: "text"}
+      - {label: "Zdjęcie główne", name: "heroImage", widget: "image", required: false}
+      - {label: "Kategoria", name: "category", widget: "select", options: ["Architektura", "Stolarstwo", "Rzemiosło", "Inne"], default: "Stolarstwo"}
+      - {label: "Tagi", name: "tags", widget: "list", required: false}
+      - {label: "Treść główna", name: "body", widget: "markdown"}
