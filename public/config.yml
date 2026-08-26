@@ -1,0 +1,19 @@
+backend:
+  name: github
+  repo: saladziakcloud/itakura.studio
+  branch: main # Lub master, w zależności od tego jak masz nazwaną główną gałąź
+
+media_folder: "public/images" # Gdzie mają lądować wrzucane zdjęcia
+public_folder: "/images"
+
+collections:
+  - name: "blog"
+    label: "Wpisy na bloga"
+    folder: "src/content/blog" # Ścieżka, gdzie szablon trzyma pliki markdown postów
+    create: true
+    fields:
+      - {label: "Tytuł", name: "title", widget: "string"}
+      - {label: "Data publikacji", name: "pubDate", widget: "datetime"}
+      - {label: "Opis", name: "description", widget: "string"}
+      - {label: "Zdjęcie wyróżniające", name: "heroImage", widget: "image", required: false}
+      - {label: "Treść", name: "body", widget: "markdown"}
