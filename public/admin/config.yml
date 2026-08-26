@@ -3,25 +3,18 @@ backend:
   repo: saladziakcloud/itakura.studio
   branch: main
   base_url: https://itakura.studio
-  auth_endpoint: /api/auth/login
+  auth_endpoint: /auth
 
-locale: pl
-
-media_folder: "public/images"
-public_folder: "/images"
+media_folder: public/assets
+public_folder: /assets
 
 collections:
-  - name: "blog"
-    label: "Wpisy i Projekty"
-    label_singular: "Wpis / Projekt"
-    folder: "src/content/blog"
+  - name: blog
+    label: Blog
+    folder: src/content/blog
     create: true
-    slug: "{{slug}}"
     fields:
-      - {label: "Tytuł", name: "title", widget: "string"}
-      - {label: "Data publikacji", name: "pubDate", widget: "datetime"}
-      - {label: "Krótki opis / Zajawka", name: "description", widget: "text"}
-      - {label: "Zdjęcie główne", name: "heroImage", widget: "image", required: false}
-      - {label: "Kategoria", name: "category", widget: "select", options: ["Architektura", "Stolarstwo", "Rzemiosło", "Inne"], default: "Stolarstwo"}
-      - {label: "Tagi", name: "tags", widget: "list", required: false}
-      - {label: "Treść główna", name: "body", widget: "markdown"}
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Description", name: "description", widget: "text" }
+      - { label: "Body", name: "body", widget: "mdx" }
