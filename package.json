@@ -1,21 +1,25 @@
 {
-  "name": "astro-blog-template",
-  "version": "0.0.1",
+  "name": "itakura-studio",
+  "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro build",
-    "preview": "astro preview",
-    "astro": "astro"
+    "preview": "astro preview"
   },
   "dependencies": {
+    "@astrojs/cloudflare": "^12.0.0",
     "@astrojs/mdx": "^4.2.0",
     "@astrojs/svelte": "^7.0.6",
     "astro": "^5.5.2",
     "reading-time": "^1.5.0",
     "rehype-external-links": "^3.0.0",
     "remark-gfm": "^4.0.0",
-    "remark-smartypants": "^2.0.0"
+    "remark-smartypants": "^2.0.0",
+    "svelte": "^5.1.16"
+  },
+  "devDependencies": {
+    "typescript": "^5.3.3"
   }
 }
